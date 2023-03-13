@@ -3,7 +3,7 @@ let count = 0;
 
 function guessTheNumber() {
     let input = prompt("1から100までの数あて（Guess the number 1 to 100）：");
-    if (input !== null && input !== undefined && input.trim() !== "" && !Number.isNaN(Number(input))) {
+    if (input !== null && input !== undefined && input !== NaN && input.trim() !== "" && !Number.isNaN(Number(input))) {
         count++;
         if (Number(input) === number) {
             if (confirm(`正解！数は${number}でした。あなたは${count}回の推測しました。もう一度やりますか？\nCorrect answer! The number was ${number}. You tried ${count} guesses.Retry?`)) {

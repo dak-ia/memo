@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Test</title>
+    <script type="text/javascript" src="primes.js"></script>
+</head>
+
+<body>
+    <main style="text-align:center;">
+        <input type="number" id="input" value="10">
+        <input type="button" id="button" value="run" onclick="run();">
+        <div id="output"></div>
+        <script type="text/javascript">
+            function run() {
+                let input = document.getElementById("input");
+                let button = document.getElementById("button");
+                let output = document.getElementById("output");
+                let result = undefined;
+                if (!Number.isNaN(input.value)) {
+                    input.disabled = true;
+                    button.disabled = true;
+                    input.value = Number(input.value, 10);
+                    result = getAnyPrime(input.value);
+                    input.disabled = false;
+                    button.disabled = false;
+                }
+                output.innerHTML = result;
+            }
+        </script>
+    </main>
+</body>
+
+</html>

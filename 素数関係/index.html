@@ -12,16 +12,22 @@
 
 <body>
     <main style="text-align:center;">
-        <input type="number" id="input" value="10">
+        <input type="number" id="input" value="1" autofocus>
         <input type="button" id="button" value="run" onclick="run();">
         <div id="output"></div>
         <script type="text/javascript">
+            input.addEventListener("keydown", (e) => {
+                if (e.key == "Enter") {
+                    run();
+                }
+            });
+
             function run() {
                 let input = document.getElementById("input");
                 let button = document.getElementById("button");
                 let output = document.getElementById("output");
                 let result = undefined;
-                if (!Number.isNaN(input.value)) {
+                if (!Number.isInteger(input.value)) {
                     input.disabled = true;
                     button.disabled = true;
                     input.value = Number(input.value, 10);
@@ -30,6 +36,7 @@
                     button.disabled = false;
                 }
                 output.innerHTML = result;
+                input.focus();
             }
         </script>
     </main>

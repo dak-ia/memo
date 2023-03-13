@@ -27,7 +27,7 @@
                 let button = document.getElementById("button");
                 let output = document.getElementById("output");
                 let result = undefined;
-                if (!Number.isInteger(input.value)) {
+                if (input.value !== null && input.value !== undefined && input.value.trim() !== "" && !Number.isNaN(input.value)) {
                     input.disabled = true;
                     button.disabled = true;
                     input.value = Number(input.value, 10);

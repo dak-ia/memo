@@ -4,4 +4,4 @@
 再使用自由  
 責任は負わない
 
-###2つの更新予定のない小さなリポジトリを統合（MyBitburnerCodeとRingBuffer）
+###2023/04/02 2つの更新予定のない小さなリポジトリを統合（MyBitburnerCodeとRingBuffer）

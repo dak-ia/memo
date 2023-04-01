@@ -1,4 +1,4 @@
-## Ring_Buffer_Tutorial
+## Ring_Buffer_Test
 ### Japanese
 昔作ったリングバッファのプログラムです。
 

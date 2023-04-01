@@ -3,3 +3,5 @@
 
 再使用自由  
 責任は負わない
+
+###2つの更新予定のない小さなリポジトリを統合（MyBitburnerCodeとRingBuffer）
